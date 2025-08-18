@@ -1,6 +1,6 @@
 window.addEventListener('load', ()=>{
 
-    let productPhoto = productPhoto = document.getElementById('productPhoto');
+    let productPhoto = document.getElementById('productPhoto');
 
     console.log('ready');
     
@@ -15,5 +15,3 @@ window.addEventListener('load', ()=>{
         })
     });
 })
-
-
