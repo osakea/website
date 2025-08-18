@@ -56,3 +56,23 @@ function hide_button() {
   document.getElementById('prev').style.display = 'none';
   
 }
+
+function onSearch(query){
+  fetch(`https://dummyjson.com/products/search?q=${query}&select=title,price,description,images&limit=10`)
+  .then(res => res.json())
+  .then(res =>{
+    const htmlContent = res.products.map(e =>
+        setTemplate(e.title, e.price, e.description, e.images)
+    )
+  
+    product.innerHTML = htmlContent.join('')
+  });
+}  
+
+document.getElementById('searchBtn').addEventListener('click', (e)=>{
+  e.preventDefault()
+  let query = document.getElementById('searchInput').value;
+  onSearch(query)
+
+})
+
