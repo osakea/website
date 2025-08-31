@@ -14,7 +14,7 @@ function setTemplate(title, price, des, img, id) {
 }
 
 const product = document.getElementById('product')
-fetch('https://dummyjson.com/products?limit=30&skip=0&select=title,price,description,images')
+fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}&select=title,price,description,images`)
 .then(res => res.json())
 .then(res =>{
     const htmlContent = res.products.map(e =>
