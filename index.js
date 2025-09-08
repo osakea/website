@@ -8,7 +8,7 @@ function setTemplate(title, price, des, img, id) {
         <div class="card-body">
           <h5 class="card-title">${title}</h5>
           <p class="card-text">${des}</p>
-          <a href="http://127.0.0.1:3000/show/show.html?id=${id}" class="btn btn-primary" style="background-image: linear-gradient(to right, #ffda63, #FDEB82);">View more</a>
+          <a href="/show.html?id=${id}" class="btn btn-primary" style="background-image: linear-gradient(to right, #ffda63, #FDEB82);">View more</a>
         </div>
       </div>`;
 }
